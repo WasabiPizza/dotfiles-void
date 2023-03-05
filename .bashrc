@@ -46,6 +46,14 @@ export QT_QPA_PLATFORM=wayland
 export MOZ_ENABLE_WAYLAND=1
 export ANKI_WAYLAND=1
 
+export SSH_AUTH_SOCK=${HOME}/.ssh/agent
+if ! pgrep -u ${USER} ssh-agent > /dev/null; then
+    rm -f ${SSH_AUTH_SOCK}
+fi
+if [ ! -S ${SSH_AUTH_SOCK} ]; then
+    eval $(ssh-agent -a ${SSH_AUTH_SOCK} 2> /dev/null)
+fi
+
 export BEMENU_OPTS='-H 26 --fn "Iosevka Term 11" --nf "#666666" --nb "#141414" --sb "#141414" --sf "#ffffff" --tf "#af9dde" --hf "#ffffff" --af "#666666" --ab "#141414"' 
 
 export LESS=-R

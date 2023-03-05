@@ -65,13 +65,20 @@ window#waybar.chromium {
 #battery,
 #cpu,
 #memory,
-#temperature,
+#bluetooth,
 #backlight,
 #network,
 #wireplumber,
+#pulseaudio,
 #custom-powermenu {
-    padding: 0 0px;
-    margin: 0 8px;
+    padding: 0 0;
+    margin-right: 16px;
+    color: #e3dfdf;
+}
+
+#temperature {
+    padding: 0 0;
+    margin-right: 12px;
     color: #e3dfdf;
 }
 

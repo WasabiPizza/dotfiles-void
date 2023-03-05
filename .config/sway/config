@@ -166,7 +166,7 @@ assign {
 ### Floating windows
 for_window {
   #[app_id=".*"] floating enable
-  [title="(?:Open|Save) (?:File|Folder|As)"] floating enable, resize set width 1000 height 600
+  [title="(?:Open|Save) (?:File|Folder|As)"] floating enable
   [title="Firefox — Sharing Indicator"] kill
   [app_id="Firefox" title="Picture-in-Picture"] floating enable, resize set width 600 px height 300 px, move position 830 px 565 px, sticky enable
   [app_id="Firefox" title="Library"] floating enable
@@ -180,6 +180,7 @@ for_window {
   [app_id="galculator"] floating enable
   [app_id="org.keepassxc.KeePassXC" title="KeePassXC - Browser Access Request"] floating enable
   [app_id="org.keepassxc.KeePassXC" title="KeePassXC - Access Request"] floating enable
+  [app_id="transmission-gtk" title="Torrent Options"] floating enable
 }
 
 bindgesture swipe:right workspace prev 
